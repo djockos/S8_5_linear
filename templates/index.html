@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+<!--Enter Name -->
+<div style="padding:10px;">
+  <div class="enter-name">
+    <form action="{{ url_for('predict') }}" method="POST">
+      <label>Country</label> <input required type="text" name='Country'>
+      <label>Age</label> <input type="integer" name="Age">
+      <label>Salary</label> <input type="integer" name="Salary">
+      <input type="submit" value="Let's predict if the customer will purchase the article !">
+    </form>
+  </div>
+</div>
+{% endblock %}
